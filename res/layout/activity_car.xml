@@ -1,0 +1,269 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#313236"
+    tools:context="com.example.carcontrol.SmartCar" >
+	
+    <LinearLayout 
+	    android:id="@+id/LinearLayout2"
+	    android:layout_width="match_parent"
+	    android:layout_gravity="center_vertical"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+	    
+	    <RelativeLayout
+	        android:id="@+id/RelativeLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:fitsSystemWindows="true"
+	        android:orientation="vertical" >
+	
+	        <!-- 左电机加速 -->
+	        <ImageView
+	            android:id="@+id/left_faster"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_above="@+id/left"
+	            android:layout_toLeftOf="@+id/left"
+	            android:src="@drawable/faster" />
+	        
+	        <!-- 左电机减速 -->
+	        <ImageView
+	            android:id="@+id/left_slower"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/left"
+	            android:layout_toLeftOf="@+id/left"
+	            android:src="@drawable/slower" />
+	        
+	        <!-- 右电机加速 -->
+	        <ImageView
+	            android:id="@+id/right_faster"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_above="@+id/right"
+	            android:layout_toRightOf="@+id/right"
+	            android:src="@drawable/faster" />
+	        
+	        <!-- 右电机减速 -->
+	        <ImageView
+	            android:id="@+id/right_slower"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/right"
+	            android:layout_toRightOf="@+id/right"
+	            android:src="@drawable/slower" />
+	        
+	        <!-- 上 -->
+	        <ImageView
+	            android:id="@+id/up"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/light"
+	            android:layout_marginTop="15dp"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/up" />
+	
+	        <!-- 左 -->
+	        <ImageView
+	            android:id="@+id/left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/up"
+	            android:layout_toLeftOf="@+id/button1"
+	            android:src="@drawable/left" />
+	
+	        <!-- 中间按钮 -->
+	        <ImageView
+	            android:id="@+id/button1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/up"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/icon_center"
+	            android:visibility="invisible" />
+	        
+	        <!-- 右 -->
+	        <ImageView
+	            android:id="@+id/right"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/up"
+	            android:layout_toRightOf="@+id/button1"
+	            android:src="@drawable/right" />
+	
+	        <!-- 下 -->
+	        <ImageView
+	            android:id="@+id/down"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/button1"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/down" />
+	
+	        <!-- 蓝牙 -->
+	        <ImageView
+	            android:id="@+id/bluetooth"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/bluetooth" />
+	
+	        <!-- 喇叭 -->
+	        <ImageView
+	            android:id="@+id/beep"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/bluetooth"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="5dp"
+	            android:layout_marginBottom="10dp"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="20dp"
+	            android:src="@drawable/beep" />
+	        
+	        <!-- 大灯 -->
+	        <ImageView
+	            android:id="@+id/light"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/bluetooth"
+	            android:layout_toLeftOf="@+id/beep"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="5dp"
+	            android:src="@drawable/light" />
+	        
+	        <!--  体感 -->
+	        <ImageView
+	            android:id="@+id/sound"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/bluetooth"
+	            android:layout_toRightOf="@+id/beep"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="5dp"
+	            android:src="@drawable/sound" />
+	        
+	        <!-- 黑线循迹 -->
+	        <ImageView
+	            android:id="@+id/blackLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/down"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="15dp"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="20dp"
+	            android:src="@drawable/black_line" />
+	
+	        <!-- 逆时针旋转 -->
+	        <ImageView
+	            android:id="@+id/turnLeft"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/down"
+	            android:layout_marginTop="15dp"
+	            android:layout_toLeftOf="@+id/blackLine"
+	            android:src="@drawable/turn_left" />
+	        
+	        <!-- 顺时针旋转 -->
+	        <ImageView
+	            android:id="@+id/turnRight"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/down"
+	            android:layout_marginTop="15dp"
+	            android:layout_toRightOf="@+id/blackLine"
+	            android:src="@drawable/turn_right" />
+	        
+	        <!-- 超声波避障 -->
+	        <ImageView
+	            android:id="@+id/ultrasonic"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/blackLine"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="15dp"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="20dp"
+	            android:src="@drawable/ultrasonic_blue" />
+	        
+	        <!-- 红外线避障 -->
+	        <ImageView
+	            android:id="@+id/infraredRay"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/blackLine"
+	            android:layout_toLeftOf="@+id/ultrasonic"
+	            android:layout_marginTop="15dp"
+	            android:src="@drawable/infrared_ray_red" />
+	        
+	        <!-- 红外线跟随 -->
+	        <ImageView
+	            android:id="@+id/trace"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/blackLine"
+	            android:layout_toRightOf="@+id/ultrasonic"
+	            android:layout_marginTop="15dp"
+	            android:src="@drawable/trace_green" />
+	        
+	        <!-- 自动寻光 -->
+			<ImageView
+	            android:id="@+id/findLight"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/ultrasonic"
+	            android:layout_toLeftOf="@+id/ultrasonic"
+	            android:layout_marginTop="15dp"
+	            android:src="@drawable/find_light" />
+			
+			<!-- 超声波魔术手 -->
+			<ImageView
+	            android:id="@+id/hand"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/ultrasonic"
+	            android:layout_toRightOf="@+id/ultrasonic"
+	            android:layout_marginTop="15dp"
+	            android:src="@drawable/hand" />
+			
+	        <!-- 停止 -->
+	        <ImageView
+	            android:id="@+id/pause"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_below="@+id/infraredRay"
+				android:layout_marginTop="15dp"
+	            android:src="@drawable/pause" />
+
+	        <TextView
+	            android:id="@+id/left_speed"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/left_faster"
+	            android:layout_toLeftOf="@+id/left"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="15dp"
+	            android:layout_marginRight="30dp"
+	            android:text="1档"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	        <TextView
+	            android:id="@+id/right_speed"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/right_faster"
+	            android:layout_toRightOf="@+id/right"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="15dp"
+	            android:layout_marginLeft="30dp"
+	            android:text="1档"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    </RelativeLayout>
+	</LinearLayout>
+</LinearLayout>
